@@ -16,42 +16,48 @@
 <body class="text-center container">
 
 
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-4" style="width: 70%;" >
         <h1>25+5 Clock</h1>
-        <div class="row mt-5">
-
-            <div class="col-6">
-                <h2>Break Length</h2>
-                <h3><i class="fas fa-arrow-up"></i> 5 <i class="fas fa-arrow-down"></i></h3>
+        <div class="row mt-5 ">
+            <div class="text-center  row">
+            
+            <div class="col border ms-2 border-warning rounded shadow p-3">
+                <h2 id="session-label"class="mb-3">Session Length</h2>
+                <div class="row">
+                <button class="col btn btn-dark"id="session-increment"><i class="fas fa-arrow-up"></i></button>
+                <h3 class="col"id="session-length">25</h3>
+                <button class="col btn btn-dark"id="session-decrement"><i class="fas fa-arrow-down"></i></button>
             </div>
-
-            <div class="col-6">
-                <h2>Session Length</h2>
-                <h3><i class="fas fa-arrow-up"></i> 25 <i class="fas fa-arrow-down"></i></h3>
             </div>
-            <div class="border bg-info text-dark border-warning rounded-pill ">
-                <h2>Session</h2>
-                <h1>25:00</h1>
-
+            <div class="col  border ms-2 border-warning shadow rounded p-3">
+                <h2 id="break-label" class="mb-3">Break Length</h2>
+                <div class="row">
+                <button class="col btn btn-dark"id="break-increment"><i class="fas fa-arrow-up"></i></button>
+                <h3 class="col"id="break-length">5</h3>
+                <button class="col btn btn-dark"id="break-decrement"><i class="fas fa-arrow-down"></i></button>
             </div>
-            <div class="row mt-3">
-                <p class="col"><i class="fas fa-play fa-2x"></i><i class="fa fa-pause fa-2x"></i></p>
-                <p class="col"><i class="fas fa-sync fa-2x"></i></p>
-            </div>
-            <div class="author">
-                <!-- react-text: 28 -->
-                <!-- /react-text -->
-                <!-- react-text: 29 -->Designed and Coded by<br><a href="https://goo.gl/6NNLMG" target="_blank">Peter
-                    Weinberg</a>
             </div>
 
         </div>
 
 
+            <div class="border bg-info mt-4 text-dark border-warning rounded-pill ">
+                <h2 id="timer-label">Session</h2>
+                <h1 id="time-left">25:00</h1>
 
+            </div>
+            <div class="row mt-5">
+                
+                <button class="btn btn-dark col btn-sm shadow"id="start_stop"><i class="fas fa-play fa-2x"></i><i class="fa fa-pause fa-2x"></i></button>
+                <button class="btn btn-dark col btn-sm ms-4 shadow"id="reset"><i class="fas fa-sync fa-2x"></i></button>
+            </div>
+            <audio id="audio" src="https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3" id="beep"></audio>
+            <div class="author">
+               
+                Designed and Coded by<br><a href="https://github.com/sayinmehmet47" target="_blank">Mehmet Sayin</a>
+            </div>
 
-
-
+        </div>
 
 
     </div>

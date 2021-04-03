@@ -4,3 +4,16 @@ body{
     background-color:#1289A7;
     color: white;
 }
+.author {
+    text-align: center;
+    font-family: Share Tech Mono, sans;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #a50d0d;
+  }
+  .author a {
+    text-decoration: none;
+    color:white;
+    line-height: 26px;
+  }
+  
