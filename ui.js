@@ -5,30 +5,50 @@ class Ui {
   }
 
   increase() {
-    this.length += 1;
-    $(`#${this.name}-length`).text(this.length);
-    $('#time-left').text(`${this.length}:00`)
-    countdownTime = Number(this.length * 60 * 1000)
-
+    if (this.name === 'session') {
+      this.length += 1;
+      if (this.length >= 60) {
+        this.length = 60;
+      }
+      $(`#${this.name}-length`).text(this.length);
+      $('#time-left').text(`${this.length}:00`);
+      countdownTime = Number(this.length * 60 * 1000);
+    } else {
+      this.length += 1;
+      if (this.length >= 60) {
+        this.length = 60;
+      }
+      $(`#${this.name}-length`).text(this.length);
+    }
   }
 
   decrease() {
-    this.length -= 1;
-    $(`#${this.name}-length`).text(this.length);
-    $('#time-left').text(`${this.length}:00`)
-    countdownTime = Number(this.length * 60 * 1000)
+    if (this.name === 'session') {
+      this.length -= 1;
+      if (this.length <= 1) {
+        this.length = 1;
+      }
+      $(`#${this.name}-length`).text(this.length);
+      $('#time-left').text(`${this.length}:00`);
+      countdownTime = Number(this.length * 60 * 1000);
+    } else {
+      this.length -= 1;
+      if (this.length <= 1) {
+        this.length = 1;
+      }
 
-
+      $(`#${this.name}-length`).text(this.length);
+    }
   }
 
-
-  reset(){
-
-    $(`#${this.name}-length`).text("25");
-    $('#time-left').text(`25:00`)
-    countdownTime = Number(25 * 60 * 1000)
-
-
+  reset() {
+    uiSession.length = 25;
+    uiBreak.length = 5;
+    $(`#session-length`).text('25');
+    $('#time-left').text(`25:00`);
+    $('#break-length').text('5');
+    countdownTime = Number(25 * 60 * 1000);
+    isPaused = true;
   }
 }
 
