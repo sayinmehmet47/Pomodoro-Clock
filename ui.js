@@ -47,6 +47,10 @@ class Ui {
     $(`#session-length`).text('25');
     $('#time-left').text(`25:00`);
     $('#break-length').text('5');
+    $('#timer-label').text('Session')
+    $("#beep").onpause = function() {
+      audio.currentTime = 0;
+ };
     countdownTime = Number(25 * 60 * 1000);
     isPaused = true;
   }

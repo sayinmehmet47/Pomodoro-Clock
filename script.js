@@ -50,6 +50,8 @@
   $('#start_stop').click(function (e) {
     isPaused = !isPaused;
    
+
+   
    
   });
 
