@@ -87,3 +87,14 @@ $('#reset').click(function (e) {
 
   e.preventDefault();
 });
+
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}

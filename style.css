@@ -9,7 +9,7 @@ body{
     font-family: Share Tech Mono, sans;
     margin-top: 15px;
     font-size: 14px;
-    color: #a50d0d;
+    color: #f2f2f2;
   }
   .author a {
     text-decoration: none;
@@ -17,3 +17,9 @@ body{
     line-height: 26px;
   }
   
+  .sizing{
+    position: absolute;
+    top: 20px;
+    left: 90%;
+  }
+
