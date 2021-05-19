@@ -47,12 +47,30 @@ class Ui {
     $(`#session-length`).text('25');
     $('#time-left').text(`25:00`);
     $('#break-length').text('5');
-    $('#timer-label').text('Session')
-    $("#beep").onpause = function() {
+    $('#timer-label').text('Session');
+    $('#beep').onpause = function () {
       audio.currentTime = 0;
- };
+    };
     countdownTime = Number(25 * 60 * 1000);
-    isPaused = true;
+  }
+
+  input() {
+    console.log(this.name)
+    isPaused=true;
+    this.length=Number($(`#session-length`).text())
+    $('#time-left').text(`${this.length}:00`);
+    breaking = $('#break-length').text();
+    breNum=Number($('#break-length').text());
+    sessionNum=this.length
+    sesNum=this.length
+    countdownTime = Number(sessionNum * 60 * 1000);
+    
+    doubleClicked===false;
+    
+
+      
+
+
   }
 }
 
