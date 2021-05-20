@@ -11,6 +11,8 @@ let timer = setInterval(() => {
 
     countdownTime -= 1000;
     doubleClicked=false;
+    breaking = $('#break-length').text();
+    
 
     let min = Math.floor(countdownTime / (60 * 1000));
     let minLenght = min.toString().length;
@@ -105,11 +107,9 @@ $('.session').dblclick(function (e) {
   }
 });
 
-
 $('.break').dblclick(function (e) {
   e.preventDefault()
   doubleClicked=true
-  isPaused===true
 
   if (e.target.classList.contains('changeable')) {
     e.target.setAttribute('contenteditable', true);

@@ -55,22 +55,28 @@ class Ui {
   }
 
   input() {
-    console.log(this.name)
-    isPaused=true;
-    this.length=Number($(`#session-length`).text())
-    $('#time-left').text(`${this.length}:00`);
-    breaking = $('#break-length').text();
-    breNum=Number($('#break-length').text());
-    sessionNum=this.length
-    sesNum=this.length
-    countdownTime = Number(sessionNum * 60 * 1000);
-    
-    doubleClicked===false;
-    
+    if(this.name==="session"){
+      isPaused=true;
+      this.length=Number($(`#session-length`).text())
+      $('#time-left').text(`${this.length}:00`);
+      sessionNum=this.length
+      sesNum=this.length
+      countdownTime = Number(sessionNum * 60 * 1000);
+      
+      doubleClicked===false;
+    }
+
+    if(this.name==="break"){
+    this.length=Number($(`#break-length`).text())
+      breNum=this.length;
+      console.log(breNum)
 
       
+      doubleClicked===false;
+    }
 
-
+ 
+    
   }
 }
 
