@@ -95,19 +95,20 @@ function toggleFullScreen() {
   }
 }
 
-$('.session').dblclick(function (e) {
-  e.preventDefault()
+$('.session').click(function (e) {
+
   doubleClicked=true
 
   if (e.target.classList.contains('changeable')) {
     e.target.setAttribute('contenteditable', true);
     if (e.target.textContent === 'Click to translate') {
+      e.target.textContent = "";
       e.target.focus();
     }
   }
 });
 
-$('.break').dblclick(function (e) {
+$('.break').click(function (e) {
   e.preventDefault()
   doubleClicked=true
 
