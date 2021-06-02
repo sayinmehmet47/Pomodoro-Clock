@@ -24,6 +24,11 @@ let timer = setInterval(() => {
     if (secLenght === 1) {
       sec = `0${sec}`;
     }
+    $(".fa-volume-mute").click(e=>{
+      e.preventDefault()
+      $('#beep')[0].volume=0;
+
+    })
 
     $('#time-left').html(`${min}:${sec}`);
     if (countdownTime <= 0) {
