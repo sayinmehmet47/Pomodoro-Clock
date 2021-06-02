@@ -51,6 +51,19 @@ $('#start_stop').click(function (e) {
    countdownTime = Number(sessionNum * 60 * 1000);
 
   isPaused = !isPaused;
+    if(isPaused){
+      $(".fa-play").addClass("d-none");
+      $(".fa-pause").removeClass("d-none");
+
+
+    }else{
+        $(".fa-play").removeClass("d-none")
+        $(".fa-pause").addClass("d-none");
+
+
+    }
+  
+
   doubleClicked=false;
 
 });
