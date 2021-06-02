@@ -26,7 +26,7 @@ let timer = setInterval(() => {
     }
     $(".fa-volume-mute").click(e=>{
       e.preventDefault()
-      $('#beep')[0].volume=0;
+      $('#beep')[0].volume===0;
 
     })
 
