@@ -52,13 +52,13 @@ $('#start_stop').click(function (e) {
 
   isPaused = !isPaused;
     if(isPaused){
-      $(".fa-play").addClass("d-none");
-      $(".fa-pause").removeClass("d-none");
+      $(".fa-pause").addClass("d-none");
+      $(".fa-play").removeClass("d-none");
 
 
     }else{
-        $(".fa-play").removeClass("d-none")
-        $(".fa-pause").addClass("d-none");
+        $(".fa-pause").removeClass("d-none")
+        $(".fa-play").addClass("d-none");
 
 
     }
