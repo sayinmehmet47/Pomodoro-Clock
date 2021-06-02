@@ -59,8 +59,9 @@ $('#start_stop').click(function (e) {
   doubleClicked = false;
 });
 
-$('.fa-volume-mute').click((e) => {
+$('.volume').click((e) => {
   e.preventDefault();
+  console.log("fdf")
   $('#beep')[0].pause();
 });
 
