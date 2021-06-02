@@ -56,17 +56,11 @@ $('#start_stop').click(function (e) {
    countdownTime = Number(sessionNum * 60 * 1000);
 
   isPaused = !isPaused;
-    if(isPaused){
-      $(".fa-pause").addClass("d-none");
-      $(".fa-play").removeClass("d-none");
+      $(".fa-play").toggleClass("d-none");
+      $(".fa-pause").toggleClass("d-none");
 
 
-    }else{
-        $(".fa-pause").removeClass("d-none")
-        $(".fa-play").addClass("d-none");
-
-
-    }
+    
   
 
   doubleClicked=false;
