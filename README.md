@@ -1,5 +1,4 @@
-netlify
-https://hackers-timer.netlify.app/
+
 
 # Technologies Used
 = HTML, CSS. JQUERY
